@@ -1,0 +1,640 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Сильная система управления в бизнесе — тренинг Алексея Бебы</title>
+<meta name="description" content="Однодневный практический тренинг для собственников, руководителей и управляющих: как выстроить управление, чтобы бизнес не зависел от постоянного присутствия собственника. Стоимость — 8 000 сом.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Как построить сильную систему управления в бизнесе">
+<meta property="og:description" content="Практический тренинг Алексея Бебы для собственников, руководителей и управляющих компаний. 1 день, 3 ключевых блока, 8 000 сом.">
+<meta property="og:image" content="https://bebatraining.kg/assets/training-room.jpg">
+<meta property="og:url" content="https://bebatraining.kg/">
+<link rel="canonical" href="https://bebatraining.kg/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* ============ Tokens ============ */
+:root {
+  color-scheme: light;
+  /* Layout: фото-первая подача — реальные снимки с тренингов несут страницу; тёмно-зелёные полосы чередуются со светлыми */
+  /* Палитра по референсам: зелёный Sweetgreen #00473c, светлый зелёный Starbucks #d4e9e2,
+     жёлтая кнопка как у Бюро Горбунова (#ffd600) — вместо «золота на зелёном» */
+  --bg: #f7f7f3;
+  --surface: #ffffff;
+  --surface-2: #d4e9e2;
+  --text: #0e150e;
+  --text-2: #4a524c;
+  --text-3: #8b938d;
+  --line: #dedfd8;
+  --green: #00473c;
+  --green-hover: #003a31;
+  --green-deep: #00332b;
+  --green-raised: #0b5548;
+  --green-line: #1f5e52;
+  --green-text: #006241;
+  --on-green: #ffffff;
+  --on-green-2: #b5d3ca;
+  --cta: #ffd600;
+  --cta-hover: #ffe24d;
+  --on-cta: #0e150e;
+  --alert: #a72700;
+  --focus: #006241;
+  --font-display: "Golos Text", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Golos Text", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Spectral", Georgia, "Times New Roman", serif;
+  --display-weight: 600;
+  --display-tracking: -0.022em;
+  --fs-display: clamp(2.4rem, 1.3rem + 3.3vw, 4.4rem);
+  --fs-h2:      clamp(1.9rem, 1.3rem + 2.3vw, 3.4rem);
+  --fs-h3:      clamp(1.3rem, 1.1rem + 0.7vw, 1.75rem);
+  --fs-lead:    clamp(1.1rem, 1rem + 0.4vw, 1.3rem);
+  --fs-body:    1.0625rem;
+  --fs-small:   0.875rem;
+
+  --gutter:  clamp(16px, 4vw, 56px);
+  --maxw:    1240px;
+  --section: clamp(4rem, 2.5rem + 6vw, 8.5rem);
+  --r-photo: 4px;
+  --r-btn:   999px;
+}
+
+/* ============ Base ============ */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 72px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+img, svg { display: block; max-width: 100%; }
+h1, h2, h3, h4, p, ul, ol, figure, dl, dd { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+a { color: inherit; }
+p, li { text-wrap: pretty; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: var(--display-weight); letter-spacing: var(--display-tracking); line-height: 1.05; text-wrap: balance; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
+
+.wrap { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gutter); }
+.section { padding-block: var(--section); }
+.section-title { font-size: var(--fs-h2); max-width: 22ch; }
+.kicker { font-size: var(--fs-small); font-weight: 600; color: var(--green-text); margin-bottom: 1rem; }
+
+/* Green bands: the brand colour carries whole sections, not accents */
+.on-green { background: var(--green); color: var(--on-green); }
+.on-green .kicker { color: var(--on-green-2); }
+
+/* ============ Buttons ============ */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
+  font-family: var(--font-body); font-weight: 600; font-size: 1.0625rem; line-height: 1.2;
+  text-decoration: none; white-space: nowrap;
+  padding: 1.05rem 1.75rem; border-radius: var(--r-btn);
+  background: var(--green); color: var(--on-green);
+  transition: background-color .2s ease, color .2s ease;
+}
+.btn:hover { background: var(--green-hover); }
+.on-green .btn, .site-header .btn { background: var(--cta); color: var(--on-cta); }
+.on-green .btn:hover, .site-header .btn:hover { background: var(--cta-hover); }
+.on-green :focus-visible, .site-header :focus-visible { outline-color: var(--cta); }
+.btn-sm { font-size: 0.9375rem; padding: 0.7rem 1.2rem; }
+.i { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ============ Header ============ */
+.site-header {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 40;
+  background: var(--green); color: var(--on-green);
+  border-bottom: 1px solid transparent; transition: border-color .2s ease;
+}
+.site-header.is-scrolled { border-bottom-color: var(--green-line); }
+.header-inner { display: flex; align-items: center; gap: 2rem; height: 68px; }
+.brand { margin-right: auto; text-decoration: none; display: flex; align-items: baseline; gap: 0.75rem; min-width: 0; }
+.brand b { font-family: var(--font-display); font-weight: var(--display-weight); font-size: 1.125rem; letter-spacing: var(--display-tracking); white-space: nowrap; }
+.brand span { font-size: var(--fs-small); color: var(--on-green-2); white-space: nowrap; }
+.header-nav { display: flex; gap: 1.75rem; font-size: 0.9375rem; }
+.header-nav a { text-decoration: none; color: var(--on-green-2); }
+.header-nav a:hover { color: var(--on-green); }
+.header-phone { font-size: 0.9375rem; text-decoration: none; white-space: nowrap; color: var(--on-green-2); }
+@media (max-width: 1080px) { .header-nav { display: none; } }
+@media (max-width: 720px) { .brand span, .header-phone { display: none; } }
+
+/* ============ Hero ============ */
+.hero { padding-top: clamp(2rem, 1rem + 4vw, 4.5rem); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 7.5fr) minmax(0, 4.5fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+.hero-copy { min-width: 0; padding-bottom: clamp(1rem, 3vw, 3rem); }
+.hero-for { font-size: var(--fs-lead); color: var(--on-green-2); max-width: 34ch; }
+.hero h1 { font-size: var(--fs-display); margin-top: 1.25rem; }
+.hero-lead { margin-top: 1.5rem; max-width: 46ch; font-size: var(--fs-lead); line-height: 1.5; color: var(--on-green-2); }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.75rem; margin-top: 2.25rem; }
+.hero-price { font-size: 1.25rem; font-weight: 600; white-space: nowrap; }
+.hero-price span { font-weight: 400; color: var(--on-green-2); }
+.hero-photo { min-width: 0; }
+.hero-photo img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; border-radius: var(--r-photo); }
+
+.facts { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr) minmax(0, 1fr) minmax(0, 1fr); margin-top: clamp(3rem, 6vw, 5rem); border-top: 1px solid var(--green-line); }
+.fact { padding: 1.5rem 1.5rem 2rem 0; min-width: 0; }
+.fact + .fact { padding-left: 1.5rem; border-left: 1px solid var(--green-line); }
+.fact-val { font-family: var(--font-display); font-weight: var(--display-weight); letter-spacing: var(--display-tracking); font-size: clamp(1.6rem, 1.2rem + 1.2vw, 2.4rem); line-height: 1.1; }
+.fact-label { margin-top: 0.35rem; color: var(--on-green-2); font-size: 0.9375rem; }
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-photo { max-width: 560px; }
+  .hero-photo img { aspect-ratio: 4 / 3; object-position: 50% 58%; }
+  .facts { grid-template-columns: 1fr 1fr; }
+  .fact:nth-child(3) { padding-left: 0; border-left: 0; }
+  .fact:nth-child(n+3) { border-top: 1px solid var(--green-line); }
+}
+@media (max-width: 560px) {
+  .facts { grid-template-columns: 1fr; }
+  .fact, .fact + .fact { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 1rem 0; border-left: 0; }
+  .fact:nth-child(n+2) { border-top: 1px solid var(--green-line); }
+  .fact-val { white-space: nowrap; }
+  .fact-label { margin-top: 0; text-align: right; }
+}
+
+/* ============ Audience ============ */
+.audience-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 6vw, 6rem); align-items: start; }
+.audience-photo img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--r-photo); }
+.audience-copy { min-width: 0; }
+.list-intro { margin-top: 1.75rem; font-size: var(--fs-lead); color: var(--text-2); }
+.checks { margin-top: 1.25rem; display: grid; gap: 1rem; }
+.checks li { display: grid; grid-template-columns: 1.75rem 1fr; gap: 0.75rem; align-items: start; font-size: var(--fs-lead); line-height: 1.45; }
+.checks svg { width: 1.75rem; height: 1.75rem; color: var(--green-text); }
+@media (max-width: 860px) {
+  .audience-grid { grid-template-columns: 1fr; }
+  .audience-photo { order: 2; max-width: 520px; }
+}
+
+/* Thesis with before/after scheme */
+.shift { margin-top: clamp(4rem, 8vw, 7rem); display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; padding: clamp(1.75rem, 4vw, 3.5rem); background: var(--surface-2); border-radius: var(--r-photo); }
+.shift-copy { min-width: 0; }
+.shift-text { font-family: var(--font-display); font-weight: var(--display-weight); letter-spacing: var(--display-tracking); font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.4rem); line-height: 1.15; text-wrap: balance; }
+.schemes { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; min-width: 0; }
+.scheme { min-width: 0; }
+.scheme figcaption { margin-top: 0.75rem; font-size: 0.9375rem; line-height: 1.4; color: var(--text-2); }
+.scheme figcaption b { display: block; color: var(--text); font-weight: 600; }
+.scheme svg { width: 100%; height: auto; }
+.schemes > .i { width: 28px; height: 28px; color: var(--text-2); }
+.sch-line { stroke: var(--text-3); stroke-width: 1.5; fill: none; }
+.sch-line-strong { stroke: var(--text); stroke-width: 1.6; fill: none; }
+.sch-node { fill: var(--surface); stroke: var(--text); stroke-width: 1.6; }
+.sch-owner { fill: var(--text); }
+.sch-hot { fill: var(--alert); }
+.sch-mgr { fill: var(--green); }
+@media (max-width: 860px) { .shift { grid-template-columns: 1fr; } }
+@media (max-width: 480px) {
+  .schemes { grid-template-columns: 1fr; }
+  .schemes > .i { transform: rotate(90deg); justify-self: center; }
+}
+
+/* ============ Program ============ */
+.program { background: var(--surface); }
+.modules { margin-top: clamp(2.5rem, 5vw, 4rem); display: grid; gap: clamp(1rem, 2vw, 1.5rem); }
+.module { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(1.5rem, 5vw, 5rem); padding: clamp(1.75rem, 4vw, 3rem); background: var(--bg); border-radius: var(--r-photo); }
+.module-num { display: inline-grid; place-items: center; width: 2.5rem; height: 2.5rem; border-radius: 50%; background: var(--green); color: var(--on-green); font-weight: 600; margin-bottom: 1.5rem; font-variant-numeric: tabular-nums; }
+.module h3 { font-size: var(--fs-h3); }
+.module-q { margin-top: 0.85rem; color: var(--text-2); font-size: 1.0625rem; max-width: 36ch; }
+.module-body { min-width: 0; }
+.module-body h4 { margin-bottom: 0.75rem; font-size: var(--fs-small); font-weight: 600; color: var(--text-2); }
+.topics { display: grid; gap: 0.55rem; }
+.topics.cols-2 { display: block; columns: 2; column-gap: 2rem; }
+.topics.cols-2 li { break-inside: avoid; margin-bottom: 0.55rem; }
+.topics li { position: relative; padding-left: 1.1rem; line-height: 1.45; }
+.topics li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 6px; height: 6px; border-radius: 50%; background: var(--green-text); }
+.result { margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid var(--line); font-weight: 500; }
+.result b { color: var(--green-text); font-weight: 600; }
+@media (max-width: 860px) { .module { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .topics.cols-2 { columns: 1; } }
+
+/* ============ Outcome (green) ============ */
+.outcome .section-title { max-width: 20ch; }
+.outcome-intro { margin-top: 1.25rem; font-size: var(--fs-lead); color: var(--on-green-2); }
+.chain { margin-top: clamp(2.5rem, 5vw, 3.5rem); display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0.5rem; counter-reset: step; }
+.chain li { position: relative; padding: 1.25rem 1rem 1.4rem; background: var(--green-raised); border-radius: var(--r-photo); min-width: 0; }
+.chain li::before { counter-increment: step; content: counter(step); display: block; font-size: var(--fs-small); color: var(--on-green-2); margin-bottom: 1.75rem; font-variant-numeric: tabular-nums; }
+.chain li:not(:last-child)::after { content: ""; position: absolute; z-index: 1; top: 50%; right: -0.55rem; width: 0.6rem; height: 0.6rem; background: var(--green-raised); transform: translateY(-50%) rotate(45deg); }
+.chain span { display: block; font-weight: 600; font-size: 1.0625rem; line-height: 1.3; }
+.chain li:last-child { background: var(--on-green); color: var(--green); }
+.chain li:last-child::before { color: var(--green); }
+.key { margin-top: clamp(3rem, 6vw, 5rem); display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(1rem, 6vw, 6rem); }
+.key-text { font-family: var(--font-display); font-weight: var(--display-weight); letter-spacing: var(--display-tracking); font-size: clamp(1.5rem, 1.05rem + 1.8vw, 2.6rem); line-height: 1.15; text-wrap: balance; }
+@media (max-width: 1000px) {
+  .chain { grid-template-columns: 1fr 1fr; }
+  .chain li:not(:last-child)::after { display: none; }
+}
+@media (max-width: 860px) { .key { grid-template-columns: 1fr; } }
+
+/* ============ Format ============ */
+.format-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 1.5rem); margin-top: clamp(2.5rem, 5vw, 3.5rem); }
+.big { padding: clamp(1.5rem, 3vw, 2.25rem); background: var(--surface); border-radius: var(--r-photo); min-width: 0; }
+.big-num { font-family: var(--font-display); font-weight: var(--display-weight); letter-spacing: var(--display-tracking); font-size: clamp(3.5rem, 2rem + 4.5vw, 6.5rem); line-height: 0.95; white-space: nowrap; }
+.big-unit { margin-top: 0.75rem; font-size: var(--fs-h3); font-weight: 600; line-height: 1.15; }
+.big-label { margin-top: 0.25rem; color: var(--text-2); }
+.big-price { background: var(--green); color: var(--on-green); }
+.big-price .big-label { color: var(--on-green-2); }
+.venue { margin-top: clamp(1rem, 2vw, 1.5rem); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)) auto; gap: 1rem 2rem; align-items: center; padding: clamp(1.5rem, 3vw, 2.25rem); border: 1px solid var(--line); border-radius: var(--r-photo); }
+.venue dt { font-size: var(--fs-small); color: var(--text-2); }
+.venue dd { margin-top: 0.3rem; font-size: 1.25rem; font-weight: 600; }
+.venue .pending { color: var(--text-3); }
+.venue-note { grid-column: 1 / -1; color: var(--text-2); font-size: 0.9375rem; }
+@media (max-width: 860px) {
+  .format-grid { grid-template-columns: 1fr; }
+  .venue { grid-template-columns: 1fr 1fr; }
+  .venue .btn { grid-column: 1 / -1; justify-self: start; }
+}
+
+/* ============ Speaker ============ */
+.speaker { background: var(--surface); }
+.speaker-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 6vw, 6rem); align-items: start; }
+.speaker-photo img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 40%; border-radius: var(--r-photo); }
+.speaker-copy { min-width: 0; }
+.speaker h2 { font-size: clamp(2.4rem, 1.4rem + 3.6vw, 4.5rem); }
+.speaker-role { margin-top: 1rem; font-size: var(--fs-lead); color: var(--text-2); max-width: 34ch; }
+.bio { margin-top: 2rem; }
+.bio li { padding-block: 1rem; border-top: 1px solid var(--line); line-height: 1.5; }
+.bio li:last-child { border-bottom: 1px solid var(--line); }
+.bio b { font-weight: 600; }
+@media (max-width: 860px) {
+  .speaker-grid { grid-template-columns: 1fr; }
+  .speaker-photo { max-width: 480px; }
+}
+
+/* Gallery: one wide room shot + four close-ups, all real photos from past trainings */
+.gallery { margin-top: clamp(4rem, 8vw, 6.5rem); }
+.gallery-title { font-size: var(--fs-h3); margin-bottom: 1.5rem; }
+.mosaic { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(0.5rem, 1vw, 0.875rem); }
+.mosaic figure { position: relative; min-width: 0; }
+.mosaic img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--r-photo); }
+.mosaic .m-big { grid-column: span 2; grid-row: span 2; }
+.mosaic .m-big img { position: absolute; inset: 0; height: 100%; aspect-ratio: auto; }
+@media (max-width: 760px) {
+  .mosaic { grid-template-columns: 1fr 1fr; }
+  .mosaic .m-big { grid-row: auto; }
+  .mosaic .m-big img { position: static; aspect-ratio: 4 / 3; }
+}
+
+/* ============ Final ============ */
+.final-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(2rem, 6vw, 6rem); align-items: end; }
+.final h2 { font-size: var(--fs-h2); max-width: 18ch; }
+.final-sub { margin-top: 1.5rem; font-size: var(--fs-lead); color: var(--on-green-2); max-width: 44ch; line-height: 1.5; }
+.final-box { display: grid; gap: 1rem; }
+.final-box .btn { width: 100%; font-size: 1.125rem; padding-block: 1.2rem; }
+.final-meta { display: grid; gap: 0.35rem; color: var(--on-green-2); }
+.final-meta b { color: var(--on-green); font-weight: 600; }
+.final-meta a { text-decoration-color: var(--green-line); }
+@media (max-width: 860px) { .final-grid { grid-template-columns: 1fr; } }
+
+.site-footer { background: var(--green-deep); color: var(--on-green-2); font-size: var(--fs-small); }
+.footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem 2rem; padding-block: 1.75rem calc(1.75rem + env(safe-area-inset-bottom, 0px)); }
+.site-footer a { text-decoration: none; }
+
+
+/* Второй голос — антиква для смысловых фраз и цифр (как Graphik + Tiempos у HBS) */
+.hero-lead, .module-q, .speaker-role, .final-sub, .outcome-intro, .list-intro { font-family: var(--font-serif); font-size: clamp(1.15rem, 1.05rem + 0.45vw, 1.4rem); line-height: 1.45; }
+.shift-text, .key-text { font-family: var(--font-serif); font-weight: 500; letter-spacing: -0.01em; }
+.big-num, .fact-val { font-family: var(--font-serif); font-weight: 500; letter-spacing: -0.02em; }
+.big-price .big-num { color: var(--cta); }
+
+/* ============ Mobile sticky CTA ============ */
+.mobile-bar { display: none; }
+@media (max-width: 720px) {
+  .mobile-bar {
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+    padding: 0.7rem 16px calc(0.7rem + env(safe-area-inset-bottom, 0px));
+    background: var(--surface); border-top: 1px solid var(--line);
+    transform: translateY(110%); transition: transform .3s ease;
+  }
+  .mobile-bar.is-visible { transform: none; }
+  .mobile-bar small { display: block; color: var(--text-2); font-size: 0.8125rem; }
+  .mobile-bar strong { font-size: 1.125rem; font-weight: 600; }
+  .mobile-bar .btn { padding: 0.85rem 1.25rem; font-size: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) { .mobile-bar { transition: none; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top"><b>Алексей Беба</b><span>Тренинг для собственников и руководителей</span></a>
+    <nav class="header-nav" aria-label="Разделы">
+      <a href="#audience">Для кого</a>
+      <a href="#program">Программа</a>
+      <a href="#format">Формат</a>
+      <a href="#speaker">Спикер</a>
+    </nav>
+    <a class="header-phone" href="tel:+996550467363">0550&nbsp;467&nbsp;363</a>
+    <a class="btn btn-sm" data-cta href="https://wa.me/996550467363">Записаться</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 1. Первый экран -->
+  <section class="hero on-green">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="hero-for">Практический тренинг для собственников, руководителей и&nbsp;управляющих компаний</p>
+          <h1>Как построить сильную систему управления в&nbsp;бизнесе</h1>
+          <p class="hero-lead">Как выстроить управление так, чтобы бизнес не зависел от постоянного присутствия собственника, а&nbsp;руководители действительно управляли своими направлениями.</p>
+          <div class="hero-actions">
+            <a class="btn" data-cta href="https://wa.me/996550467363">Записаться на тренинг</a>
+            <p class="hero-price"><span>Стоимость —</span> 8&nbsp;000&nbsp;сом</p>
+          </div>
+        </div>
+        <figure class="hero-photo">
+          <img src="assets/training-room.jpg" alt="Алексей Беба ведёт тренинг: полный зал участников, на экране схема процесса" width="810" height="1080">
+        </figure>
+      </div>
+
+      <dl class="facts">
+        <div class="fact"><dt class="fact-val">1 день</dt><dd class="fact-label">практической работы</dd></div>
+        <div class="fact"><dt class="fact-val">3&nbsp;ключевых блока</dt><dd class="fact-label">системы управления</dd></div>
+        <div class="fact"><dt class="fact-val">8&nbsp;000 сом</dt><dd class="fact-label">стоимость участия</dd></div>
+        <div class="fact"><dt class="fact-val">Скоро</dt><dd class="fact-label">объявим дату и место</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 2. Для кого -->
+  <section class="section audience" id="audience">
+    <div class="wrap">
+      <div class="audience-grid">
+        <figure class="audience-photo">
+          <img src="assets/audience.jpg" alt="Участники прошлого тренинга слушают и записывают" width="810" height="1080" loading="lazy">
+        </figure>
+        <div class="audience-copy">
+          <p class="kicker">Для кого этот тренинг</p>
+          <h2 class="section-title">Для собственников, руководителей и&nbsp;управляющих бизнеса</h2>
+          <p class="list-intro">Тренинг будет полезен, если вы:</p>
+          <ul class="checks">
+            <li><svg class="i" viewBox="0 0 28 28" aria-hidden="true"><path d="M7 14.5l4.5 4.5L21 9.5"/></svg><span>постоянно вовлечены в&nbsp;решение операционных вопросов;</span></li>
+            <li><svg class="i" viewBox="0 0 28 28" aria-hidden="true"><path d="M7 14.5l4.5 4.5L21 9.5"/></svg><span>чувствуете, что без вас многие процессы останавливаются;</span></li>
+            <li><svg class="i" viewBox="0 0 28 28" aria-hidden="true"><path d="M7 14.5l4.5 4.5L21 9.5"/></svg><span>назначили сильных специалистов руководителями, но они пока не стали полноценными управленцами;</span></li>
+            <li><svg class="i" viewBox="0 0 28 28" aria-hidden="true"><path d="M7 14.5l4.5 4.5L21 9.5"/></svg><span>хотите распределить ответственность, но не понимаете, как сделать это системно;</span></li>
+            <li><svg class="i" viewBox="0 0 28 28" aria-hidden="true"><path d="M7 14.5l4.5 4.5L21 9.5"/></svg><span>ставите задачи и принимаете решения, но внедрение часто «зависает»;</span></li>
+            <li><svg class="i" viewBox="0 0 28 28" aria-hidden="true"><path d="M7 14.5l4.5 4.5L21 9.5"/></svg><span>хотите, чтобы руководители самостоятельно управляли своими направлениями и отвечали за результат.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="shift">
+        <div class="shift-copy">
+          <p class="kicker">Главная задача тренинга</p>
+          <p class="shift-text">Перейти от управления через личное участие собственника к&nbsp;работающей системе.</p>
+        </div>
+        <div class="schemes">
+          <figure class="scheme">
+            <svg viewBox="0 0 220 150" role="img" aria-label="Сейчас: все сотрудники напрямую замкнуты на собственника">
+              <path class="sch-line" d="M110 75L40 30M110 75L110 18M110 75L180 30M110 75L40 120M110 75L110 132M110 75L180 120M110 75L28 75M110 75L192 75"/>
+              <g class="sch-node">
+                <circle cx="40" cy="30" r="7"/><circle cx="110" cy="18" r="7"/><circle cx="180" cy="30" r="7"/>
+                <circle cx="28" cy="75" r="7"/><circle cx="192" cy="75" r="7"/>
+                <circle cx="40" cy="120" r="7"/><circle cx="110" cy="132" r="7"/><circle cx="180" cy="120" r="7"/>
+              </g>
+              <circle class="sch-hot" cx="110" cy="75" r="14"/>
+            </svg>
+            <figcaption><b>Сейчас</b>Все вопросы идут через собственника</figcaption>
+          </figure>
+          <svg class="i" viewBox="0 0 28 28" aria-hidden="true"><path d="M6 14h16M16 8l6 6-6 6"/></svg>
+          <figure class="scheme">
+            <svg viewBox="0 0 220 150" role="img" aria-label="После: собственник управляет тремя руководителями, у каждого своя команда">
+              <path class="sch-line-strong" d="M110 32V52H40V69M110 52V69M110 52H180V69"/>
+              <path class="sch-line" d="M40 85V100H18V117M40 100H62V117M110 85V100H88V117M110 100H132V117M180 85V100H158V117M180 100H202V117"/>
+              <circle class="sch-owner" cx="110" cy="22" r="10"/>
+              <circle class="sch-mgr" cx="40" cy="77" r="8"/><circle class="sch-mgr" cx="110" cy="77" r="8"/><circle class="sch-mgr" cx="180" cy="77" r="8"/>
+              <g class="sch-node">
+                <circle cx="18" cy="123" r="6"/><circle cx="62" cy="123" r="6"/><circle cx="88" cy="123" r="6"/>
+                <circle cx="132" cy="123" r="6"/><circle cx="158" cy="123" r="6"/><circle cx="202" cy="123" r="6"/>
+              </g>
+            </svg>
+            <figcaption><b>После тренинга</b>Руководители управляют своими направлениями</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Программа -->
+  <section class="section program" id="program">
+    <div class="wrap">
+      <p class="kicker">Программа</p>
+      <h2 class="section-title">За один день разберём 3&nbsp;ключевых элемента сильной системы управления</h2>
+
+      <ol class="modules">
+        <li class="module">
+          <div>
+            <span class="module-num">1</span>
+            <h3>Сильные руководители внутри компании</h3>
+            <p class="module-q">Как вырастить руководителей, которые действительно управляют, а&nbsp;не просто получают новую должность.</p>
+          </div>
+          <div class="module-body">
+            <h4>Разберём</h4>
+            <ul class="topics cols-2">
+              <li>как превращать сильных специалистов в&nbsp;руководителей</li>
+              <li>какие управленческие инструменты необходимы руководителю</li>
+              <li>постановку целей и задач</li>
+              <li>зоны ответственности</li>
+              <li>показатели эффективности</li>
+              <li>планёрки и регулярный менеджмент</li>
+              <li>делегирование</li>
+              <li>контроль</li>
+              <li>обратную связь</li>
+            </ul>
+            <p class="result"><b>Результат:</b> понимание, что должно быть в&nbsp;системе работы каждого руководителя.</p>
+          </div>
+        </li>
+
+        <li class="module">
+          <div>
+            <span class="module-num">2</span>
+            <h3>Бизнес без постоянного ручного управления собственника</h3>
+            <p class="module-q">Как перестать быть «узким горлышком», через которое проходят все решения.</p>
+          </div>
+          <div class="module-body">
+            <h4>Разберём</h4>
+            <ul class="topics">
+              <li>как распределить роли и зоны ответственности</li>
+              <li>как определить, кто и за что отвечает</li>
+              <li>как связать ответственность с целями и показателями</li>
+              <li>как выстроить регулярный менеджмент</li>
+              <li>как сделать так, чтобы руководители самостоятельно управляли своими направлениями</li>
+            </ul>
+            <p class="result"><b>Результат:</b> собственник перестаёт быть единственным центром принятия решений.</p>
+          </div>
+        </li>
+
+        <li class="module">
+          <div>
+            <span class="module-num">3</span>
+            <h3>Внедрение изменений в&nbsp;компании</h3>
+            <p class="module-q">Как сделать так, чтобы решения не оставались только на уровне разговоров.</p>
+          </div>
+          <div class="module-body">
+            <h4>Разберём</h4>
+            <ul class="topics">
+              <li>почему хорошие решения часто не доходят до внедрения</li>
+              <li>как переводить решения в&nbsp;конкретные проекты и действия</li>
+              <li>как назначать ответственность</li>
+              <li>как контролировать выполнение</li>
+              <li>как закреплять новые правила и изменения в&nbsp;работе компании</li>
+            </ul>
+            <p class="result"><b>Результат:</b> изменения становятся управляемым процессом, а&nbsp;не разовыми инициативами.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 4. Что участник заберёт -->
+  <section class="section outcome on-green" id="outcome">
+    <div class="wrap">
+      <p class="kicker">Что вы заберёте с тренинга</p>
+      <h2 class="section-title">В результате вы соберёте каркас системы управления своим бизнесом</h2>
+      <p class="outcome-intro">После тренинга у вас будет понимание:</p>
+      <ol class="chain">
+        <li><span>Кто управляет</span></li>
+        <li><span>За что отвечает</span></li>
+        <li><span>Каких результатов должен достичь</span></li>
+        <li><span>По каким показателям оценивается</span></li>
+        <li><span>Как контролируется работа</span></li>
+        <li><span>Как внедряются изменения</span></li>
+      </ol>
+      <div class="key">
+        <p class="kicker">И главное</p>
+        <p class="key-text">Система управления должна работать не&nbsp;только тогда, когда собственник лично находится внутри каждого процесса.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Формат -->
+  <section class="section format" id="format">
+    <div class="wrap">
+      <p class="kicker">Формат</p>
+      <h2 class="section-title">Формат и стоимость участия</h2>
+      <div class="format-grid">
+        <div class="big"><p class="big-num">1</p><p class="big-unit">день</p><p class="big-label">практической работы</p></div>
+        <div class="big"><p class="big-num">3</p><p class="big-unit">ключевых блока</p><p class="big-label">системы управления</p></div>
+        <div class="big big-price"><p class="big-num">8&nbsp;000</p><p class="big-unit">сом</p><p class="big-label">стоимость участия</p></div>
+      </div>
+      <!-- TODO: заменить «Уточняется» на реальные дату, время и адрес; добавить ссылку на карту -->
+      <div class="venue">
+        <dl><dt>Дата</dt><dd class="pending">Скоро объявим</dd></dl>
+        <dl><dt>Время</dt><dd class="pending">Уточняется</dd></dl>
+        <dl><dt>Место</dt><dd class="pending">Уточняется</dd></dl>
+        <a class="btn" data-cta href="https://wa.me/996550467363">Узнать первым</a>
+        <p class="venue-note">Дату и место объявим в ближайшее время. Оставьте заявку — сообщим первыми.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Спикер -->
+  <section class="section speaker" id="speaker">
+    <div class="wrap speaker-grid">
+      <figure class="speaker-photo">
+        <img src="assets/beba-slide.jpg" alt="Алексей Беба с микрофоном у экрана со слайдом «Процесс и задача»" width="810" height="1080" loading="lazy">
+      </figure>
+      <div class="speaker-copy">
+        <p class="kicker">Спикер</p>
+        <h2>Алексей Беба</h2>
+        <p class="speaker-role">Основатель и эксперт Стратегического клуба для руководителей</p>
+        <ul class="bio">
+          <li>Руководитель проекта по развитию учебных центров <b>Главуч</b></li>
+          <li>Автор книг <b>«Учебный центр на&nbsp;отлично»</b> и <b>«Учебный центр. Полное руководство к&nbsp;действию»</b></li>
+          <li>Победитель конкурса «Молодой предприниматель года&nbsp;2012» по&nbsp;Калининградской области</li>
+          <li>Работал в&nbsp;московском офисе аудиторской компании PricewaterhouseCoopers и&nbsp;бросил карьеру ради воплощения детской мечты — стать актёром</li>
+          <li>В&nbsp;2010 году создал в&nbsp;Калининграде свою театральную студию</li>
+          <li>Предприниматель, муж, отец</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wrap gallery">
+      <h3 class="gallery-title">Фото с прошлых тренингов</h3>
+      <div class="mosaic">
+        <figure class="m-big"><img src="assets/training-wide.jpg" alt="Алексей Беба ведёт тренинг, в зале несколько десятков участников" width="810" height="1080" loading="lazy" style="object-position: 50% 62%"></figure>
+        <figure><img src="assets/beba-flipchart.jpg" alt="Алексей Беба объясняет схему на флипчарте" width="810" height="1080" loading="lazy" style="object-position: 50% 30%"></figure>
+        <figure><img src="assets/beba-stage.jpg" alt="Алексей Беба у экрана со слайдом «Хранитель порядка»" width="810" height="1080" loading="lazy" style="object-position: 50% 45%"></figure>
+        <figure><img src="assets/beba-facing-room.jpg" alt="Алексей Беба перед залом, участники слушают и записывают" width="810" height="1080" loading="lazy" style="object-position: 50% 55%"></figure>
+        <figure><img src="assets/audience-notes.jpg" alt="Участники тренинга делают записи" width="810" height="1080" loading="lazy" style="object-position: 50% 62%"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Финальный продающий блок -->
+  <section class="section final on-green" id="signup">
+    <div class="wrap final-grid">
+      <div>
+        <h2>Сильный бизнес начинается с&nbsp;сильной системы управления</h2>
+        <p class="final-sub">Создайте систему, в которой руководители знают свои задачи и ответственность, решения выполняются, а&nbsp;бизнес продолжает работать без постоянного участия собственника.</p>
+      </div>
+      <div class="final-box">
+        <a class="btn" data-cta href="https://wa.me/996550467363">Записаться на тренинг</a>
+        <div class="final-meta">
+          <p>Стоимость участия — <b>8&nbsp;000&nbsp;сом</b></p>
+          <p>По вопросам участия: <a href="tel:+996550467363"><b>0550&nbsp;467&nbsp;363</b></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>Тренинг Алексея Бебы «Как построить сильную систему управления в бизнесе»</span>
+    <a href="tel:+996550467363">0550&nbsp;467&nbsp;363</a>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <div><small>Тренинг · 1 день</small><strong>8&nbsp;000&nbsp;сом</strong></div>
+  <a class="btn" data-cta href="https://wa.me/996550467363">Записаться</a>
+</div>
+
+<script>
+(() => {
+  /* Куда ведёт кнопка «Записаться» */
+  const CONFIG = {
+    whatsapp: '996550467363', // 0550 467 363 в международном формате
+    message: 'Здравствуйте! Хочу записаться на тренинг «Как построить сильную систему управления в бизнесе».'
+  };
+  const ctaUrl = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(CONFIG.message)}`;
+  document.querySelectorAll('[data-cta]').forEach(a => {
+    a.href = ctaUrl;
+    a.target = '_blank';
+    a.rel = 'noopener';
+  });
+
+  const header = document.querySelector('.site-header');
+  const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* Мобильная плашка: появляется после первого экрана, прячется у финального блока */
+  const bar = document.querySelector('.mobile-bar');
+  let pastHero = false, atEnd = false;
+  const sync = () => bar.classList.toggle('is-visible', pastHero && !atEnd);
+  new IntersectionObserver(([e]) => {
+    pastHero = !e.isIntersecting && e.boundingClientRect.top < 0;
+    sync();
+  }).observe(document.querySelector('.hero-actions'));
+  const ends = new Map();
+  const endObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => ends.set(e.target, e.isIntersecting));
+    atEnd = [...ends.values()].some(Boolean);
+    sync();
+  });
+  [document.querySelector('.final'), document.querySelector('.site-footer')].forEach(el => endObserver.observe(el));
+})();
+</script>
+</body>
+</html>
